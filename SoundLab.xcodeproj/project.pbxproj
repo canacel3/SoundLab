@@ -94,10 +94,9 @@
 		DC9A3A122A7F80C8000EAAC8 /* SoundLab */ = {
 			isa = PBXGroup;
 			children = (
-				DC9A3A132A7F80C8000EAAC8 /* SoundLabApp.swift */,
-				DC9A3A152A7F80C8000EAAC8 /* ContentView.swift */,
-				DC9A3A172A7F80C8000EAAC8 /* Assets.xcassets */,
-				DC9A3A192A7F80C8000EAAC8 /* Preview Content */,
+				DC9A3A3F2A7F82A3000EAAC8 /* Supporting Files */,
+				DC9A3A3E2A7F829F000EAAC8 /* Sources */,
+				DC9A3A3D2A7F8297000EAAC8 /* Resources */,
 			);
 			path = SoundLab;
 			sourceTree = "<group>";
@@ -127,6 +126,31 @@
 			path = SoundLabUITests;
 			sourceTree = "<group>";
 		};
+		DC9A3A3D2A7F8297000EAAC8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC9A3A192A7F80C8000EAAC8 /* Preview Content */,
+				DC9A3A172A7F80C8000EAAC8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DC9A3A3E2A7F829F000EAAC8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DC9A3A152A7F80C8000EAAC8 /* ContentView.swift */,
+				DC9A3A132A7F80C8000EAAC8 /* SoundLabApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DC9A3A3F2A7F82A3000EAAC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +161,7 @@
 				DC9A3A0C2A7F80C8000EAAC8 /* Sources */,
 				DC9A3A0D2A7F80C8000EAAC8 /* Frameworks */,
 				DC9A3A0E2A7F80C8000EAAC8 /* Resources */,
+				DC6BC6592A7F8E7600598A3C /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -251,6 +276,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DC6BC6592A7F8E7600598A3C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcrun --sdk macosx swift build -c release --package-path BuildTools\n\nxcrun --sdk macosx swift build -c release \\\n--package-path ./BuildTools/.build/checkouts/SwiftLint \\\n--product swiftlint\n\n./BuildTools/.build/checkouts/SwiftLint/.build/release/swiftlint lint --config $SRCROOT/.swiftlint.yml\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC9A3A0C2A7F80C8000EAAC8 /* Sources */ = {
@@ -416,7 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SoundLab/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SoundLab/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4F3943TE3K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -445,7 +492,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SoundLab/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SoundLab/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4F3943TE3K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
