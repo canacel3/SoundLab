@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC198F642A85BD9E00BDE102 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC198F632A85BD9E00BDE102 /* RootReducer.swift */; };
+		DC198F672A85E6FB00BDE102 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DC198F662A85E6FB00BDE102 /* ComposableArchitecture */; };
 		DC9A3A142A7F80C8000EAAC8 /* SoundLabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A3A132A7F80C8000EAAC8 /* SoundLabApp.swift */; };
-		DC9A3A162A7F80C8000EAAC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A3A152A7F80C8000EAAC8 /* ContentView.swift */; };
+		DC9A3A162A7F80C8000EAAC8 /* RootPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A3A152A7F80C8000EAAC8 /* RootPage.swift */; };
 		DC9A3A182A7F80C8000EAAC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9A3A172A7F80C8000EAAC8 /* Assets.xcassets */; };
 		DC9A3A1B2A7F80C8000EAAC8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9A3A1A2A7F80C8000EAAC8 /* Preview Assets.xcassets */; };
 		DC9A3A252A7F80C9000EAAC8 /* SoundLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A3A242A7F80C9000EAAC8 /* SoundLabTests.swift */; };
@@ -34,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC198F632A85BD9E00BDE102 /* RootReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
 		DC9A3A102A7F80C8000EAAC8 /* SoundLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9A3A132A7F80C8000EAAC8 /* SoundLabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLabApp.swift; sourceTree = "<group>"; };
-		DC9A3A152A7F80C8000EAAC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DC9A3A152A7F80C8000EAAC8 /* RootPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPage.swift; sourceTree = "<group>"; };
 		DC9A3A172A7F80C8000EAAC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC9A3A1A2A7F80C8000EAAC8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC9A3A202A7F80C9000EAAC8 /* SoundLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC198F672A85E6FB00BDE102 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC198F602A85BCF500BDE102 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DC9A3A152A7F80C8000EAAC8 /* RootPage.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DC198F612A85BD6100BDE102 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				DC198F622A85BD9200BDE102 /* Root */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		DC198F622A85BD9200BDE102 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DC198F632A85BD9E00BDE102 /* RootReducer.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DC6BC65A2A7FD76900598A3C /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				DC198F602A85BCF500BDE102 /* Root */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		DC9A3A072A7F80C8000EAAC8 = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +130,9 @@
 		DC9A3A122A7F80C8000EAAC8 /* SoundLab */ = {
 			isa = PBXGroup;
 			children = (
-				DC9A3A3F2A7F82A3000EAAC8 /* Supporting Files */,
-				DC9A3A3E2A7F829F000EAAC8 /* Sources */,
 				DC9A3A3D2A7F8297000EAAC8 /* Resources */,
+				DC9A3A3E2A7F829F000EAAC8 /* Sources */,
+				DC9A3A3F2A7F82A3000EAAC8 /* Supporting Files */,
 			);
 			path = SoundLab;
 			sourceTree = "<group>";
@@ -129,8 +165,8 @@
 		DC9A3A3D2A7F8297000EAAC8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DC9A3A192A7F80C8000EAAC8 /* Preview Content */,
 				DC9A3A172A7F80C8000EAAC8 /* Assets.xcassets */,
+				DC9A3A192A7F80C8000EAAC8 /* Preview Content */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -138,7 +174,8 @@
 		DC9A3A3E2A7F829F000EAAC8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DC9A3A152A7F80C8000EAAC8 /* ContentView.swift */,
+				DC198F612A85BD6100BDE102 /* Reducers */,
+				DC6BC65A2A7FD76900598A3C /* Pages */,
 				DC9A3A132A7F80C8000EAAC8 /* SoundLabApp.swift */,
 			);
 			path = Sources;
@@ -168,6 +205,9 @@
 			dependencies = (
 			);
 			name = SoundLab;
+			packageProductDependencies = (
+				DC198F662A85E6FB00BDE102 /* ComposableArchitecture */,
+			);
 			productName = SoundLab;
 			productReference = DC9A3A102A7F80C8000EAAC8 /* SoundLab.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +280,9 @@
 				Base,
 			);
 			mainGroup = DC9A3A072A7F80C8000EAAC8;
+			packageReferences = (
+				DC198F652A85E6FB00BDE102 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = DC9A3A112A7F80C8000EAAC8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -304,7 +347,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC9A3A162A7F80C8000EAAC8 /* ContentView.swift in Sources */,
+				DC9A3A162A7F80C8000EAAC8 /* RootPage.swift in Sources */,
+				DC198F642A85BD9E00BDE102 /* RootReducer.swift in Sources */,
 				DC9A3A142A7F80C8000EAAC8 /* SoundLabApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +674,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC198F652A85E6FB00BDE102 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC198F662A85E6FB00BDE102 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC198F652A85E6FB00BDE102 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC9A3A082A7F80C8000EAAC8 /* Project object */;
 }

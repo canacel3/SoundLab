@@ -12,7 +12,7 @@ let package = Package(
             targets: ["BuildTools"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/SwiftLint.git", branch: "main")
+        .package(url: "https://github.com/realm/SwiftLint.git", from: "0.52.4")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
